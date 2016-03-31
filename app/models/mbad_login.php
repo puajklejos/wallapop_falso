@@ -1,6 +1,6 @@
 <?php
 
-	class mHome extends Model{
+	class mBad_login extends Model{
 
 		function __construct(){
 			parent::__construct();
@@ -28,7 +28,6 @@
 	}*/
 
   function login_ajax($usuario_ajax,$password_ajax){
-
    try{
         $sql="SELECT * FROM users WHERE nombre=? AND password=?";
         $this->query($sql);
@@ -36,10 +35,6 @@
         $this->bind(2,$password_ajax);
         $this->execute();
         if($this->rowCount()==1){
-             $dades=$this->single();
-             Session::set('foto_perf', $dades[0]['foto_perfil']);
-             Session::set('id_usr', $dades[0]['id_user']);
-             Session::set('rol_usr', $dades[0]['rol']);
              Session::set('islogged',TRUE);
              Session::set('usuario', $usuario_ajax);
              return TRUE;
@@ -52,6 +47,7 @@
         }
 
   }
+
 
 	}
 ?>

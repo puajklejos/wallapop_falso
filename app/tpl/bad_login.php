@@ -5,6 +5,7 @@
 			<center>
 			<form action="<?= APP_W.'home/login_ajax'; ?>" method="post" class="ajax_method" style="width: 100%">
 			<h2>Iniciar sesión en Outlet</h2><br>
+			<h4 id="bad_login">Su usuario no existe</h4>
 		      	<input type="text" id="usr_a" name="user_ajax" placeholder="Usuario registrado"></br>
 		     	<input type="password" id="pass_a" name="pass_ajax" placeholder="Contraseña"></br>
 		    	<input type="submit" value="Iniciar sesión" id="logsend"><label id="olv_pass"><a href="#" class="no_espec">¿Olvidaste tu contraseña?</a></label>
