@@ -76,7 +76,7 @@
 			if (isset($_POST['id'])) {
 				$id_user=filter_input(INPUT_POST, 'id', FILTER_SANITIZE_STRING);
 
-				$resultado = $this->model->delete_users();
+				$resultado = $this->model->delete_users($id_user);
 				if ($resultado == true) {
          			$output = true;
          			$this->ajax_set($output);
@@ -87,5 +87,54 @@
          		}
 			}
 		}
+
+		function insertarusuario()
+		{
+			if (!empty($_POST['id_u']) && !empty($_POST['nombre_u']) && !empty($_POST['email_u']) && !empty($_POST['telefono_u']) && !empty($_POST['foto_perfil_u']) && !empty($_POST['rol_u'])
+				&& !empty($_POST['pass_u']) && !empty($_POST['poblacion_u']) && !empty($_POST['pais_u'])) {
+				$id_user=filter_input(INPUT_POST, 'id_u', FILTER_SANITIZE_STRING);
+         		$nombre=filter_input(INPUT_POST, 'nombre_u', FILTER_SANITIZE_STRING);
+         		$email=filter_input(INPUT_POST, 'email_u', FILTER_SANITIZE_STRING); 
+         		$telefono=filter_input(INPUT_POST, 'telefono_u', FILTER_SANITIZE_STRING); 
+         		$foto_perfil=filter_input(INPUT_POST, 'foto_perfil_u', FILTER_SANITIZE_STRING); 
+         		$rol=filter_input(INPUT_POST, 'rol_u', FILTER_SANITIZE_STRING); 
+         		$pass=filter_input(INPUT_POST, 'pass_u', FILTER_SANITIZE_STRING); 
+         		$poblacion=filter_input(INPUT_POST, 'poblacion_u', FILTER_SANITIZE_STRING); 
+         		$pais=filter_input(INPUT_POST, 'pais_u', FILTER_SANITIZE_STRING); 
+
+         		/*echo $id_user.'<br>';
+         		echo $nombre.'<br>';
+         		echo $email.'<br>';
+         		echo $telefono.'<br>';
+         		echo $foto_perfil.'<br>';
+         		echo $rol.'<br>';
+         		echo $pass.'<br>';
+         		echo $poblacion.'<br>';
+         		echo $pais.'<br>';*/
+
+
+				$resultado = $this->model->insertar_users($id_user, $nombre, $email, $telefono, $foto_perfil, $rol, $pass, $poblacion, $pais);
+				if ($resultado == true) {
+         			//$output=array('redirect'=>APP_W.'dashboard');
+            		//$this->ajax_set($output);
+            		header('Location:'.APP_W.'dashboard');
+         			//$this->ajax_set($output);
+         		}
+         		else
+         		{
+         			return false;
+         		}
+			}
+		}
+
+		function valorar()
+		{
+			$id = $_POST['id'];
+			//echo "HHHHHHHHHHHHHHHHHHHHHHHHHHHHH";
+			$resultado = $this->model->valorar_m($id);
+         			$this->ajax_set($resultado);
+		}
+
+
 
     }

@@ -63,4 +63,13 @@
     {
        header('Location:'.APP_W.'dashboard');
     }
+
+    function redirect_anuncio()
+    {
+       header('Location:'.APP_W.'anuncio');
+    }
+    function redirect_user()
+    {
+       header('Location:'.APP_W.'user');
+    }
 }

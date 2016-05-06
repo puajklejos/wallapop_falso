@@ -157,6 +157,22 @@ input[type="password"]:focus
 	display: flex;
 	margin-right: 10%;
 }
+.home-img
+{
+	padding: 10px;
+	align-self: center;
+	display: flex;
+	margin-right: 10%;
+}
+.home-anuncio
+{
+	padding: 10px;
+	align-self: center;
+	display: flex;
+	margin-right: 10%;
+	color: #428CC4;
+}
+home-a
 .home_admin
 {
 	padding: 10px;
@@ -418,5 +434,83 @@ input[type="password"]:focus
 	outline:none;
 	border-radius:3px;
 	border:1px solid rgba(0,0,0,0.2);
-	margin-bottom: 5%;
+	margin-bottom: 1% !important;
+}
+#users_u
+{
+	display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+.usuarios
+{
+  	border: 1px solid #000;
+  	border-collapse: collapse;
+  	width: 90%;
+}
+.usuarios td
+{
+	border: 1px solid #000;
+	text-align: center;
+	padding: 10px;
+}
+.usuarios th
+{
+	border: 1px solid #000;
+	text-align: center;
+	padding: 10px;
+	background-color: #619ECD;
+}
+#insert_bd
+{
+	width: 100%;
+    border: none;
+    background: #428CC4;
+    color: #FFF;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #666B6B;
+    cursor: pointer;
+    margin-top: 1%;
+}
+#insert_bd:hover
+{
+	background: #2d4ecb;
+    -webkit-transition:background 0.3s ease-in-out;
+    -moz-transition:background 0.3s ease-in-out;
+    transition:background-color 0.3s ease-in-out;
+}
+#delete_bd
+{
+	width: 100%;
+    border: none;
+    background: red;
+    color: #FFF;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #666B6B;
+    cursor: pointer;
+}
+#delete_bd:hover
+{
+	background: #A40000;
+    -webkit-transition:background 0.3s ease-in-out;
+    -moz-transition:background 0.3s ease-in-out;
+    transition:background-color 0.3s ease-in-out;
+}
+#anuncios
+{
+	display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+    text-align: center;
+    margin-left: 2%;
+}
+.c_anuncios
+{
+	display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+    text-align: center;
+    margin-left: 2%;
 }

@@ -9,6 +9,7 @@
 			<label>Titulo</label><br> <input type="text" name="titulo" id="titulo_id" required><br>
 			<label>Subtitulo</label><br> <input type="text" name="subtitulo" id="subtitulo_id" required><br>
 			<label>Descripción</label><br><textarea name="descripcion" id="descripcion_b" required></textarea><br><br>
+			<label>URL imagen</label><br><input type="text" name="url" id="url" required placeholder="URL"></input><br><br>
 			<input type="submit" value="Nuevo anuncio!" id="logsend">
 			</form>
 			</center>

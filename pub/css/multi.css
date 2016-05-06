@@ -1,0 +1,22 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+header
+{
+	background: #83B245;
+	border: 1px #D3D3D3 solid;
+	display: flex;
+	padding: 40px;
+}
+.contenedor
+{
+	display: flex;
+	justify-content: center;
+}
+#mostrar
+{
+	margin-right: 5%;
+}

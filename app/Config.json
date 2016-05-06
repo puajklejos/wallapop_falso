@@ -1,10 +1,10 @@
 {
 	"dbconf":{
 		"driver":"mysql",
-		"dbname":"wallapop",
+		"dbname":"mgomez_wallapop",
 		"dbhost":"localhost",
-		"dbuser":"wallapop",
-		"dbpass":"1234"
+		"dbuser":"mgomez_root",
+		"dbpass":"puajklejos95"
 	},
 	"app":{
 		"title":"Marti",

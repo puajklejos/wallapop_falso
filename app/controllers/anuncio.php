@@ -20,7 +20,8 @@
          $titulo=filter_input(INPUT_POST, 'titulo', FILTER_SANITIZE_STRING);
          $subtitulo=filter_input(INPUT_POST, 'subtitulo', FILTER_SANITIZE_STRING); 
          $descripcion=filter_input(INPUT_POST, 'descripcion', FILTER_SANITIZE_STRING); 
-         $anuncio_true=$this->model->ins_anuncio($titulo, $subtitulo, $descripcion);
+         $url=filter_input(INPUT_POST, 'url', FILTER_SANITIZE_STRING); 
+         $anuncio_true=$this->model->ins_anuncio($titulo, $subtitulo, $descripcion, $url);
          if ($anuncio_true== TRUE){
               /*Session::set('usuario',$usuario_ajax);
               setcookie('usuario',Session::get('usuario'));*/
